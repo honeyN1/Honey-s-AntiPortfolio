@@ -1,0 +1,245 @@
+.contact {
+    background: #ffffff;
+    position: relative;
+    padding: 30px 30px;
+    margin: 10px 10px;
+    text-align: Left;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px rgb(8, 0, 2);
+    border: 1px solid rgb(10, 10, 10);
+    display: flex;
+    gap: 20px;
+    color: #040303;
+}
+
+.contact h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 0px;
+    text-align: left;
+    text-shadow: 4px 4px -19px rgb(0, 0, 0);
+    gap: 10px;
+}
+
+.footer-decor p {
+    font-size: 16px;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.contact-links a {
+    color: #040303;
+    margin-right: 10px;
+    width: fit-content;
+    margin: 10px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 2px solid #040303;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 3px 3px 0px #040303;
+}
+
+.contact-links a:nth-child(1) {
+    background: #FFD6E8;
+}
+
+.contact-links a:nth-child(2) {
+    background: #C7E9FF;
+}
+
+.contact-links a:nth-child(3) {
+    background: #D4F1D4;
+}
+
+.contact-links a:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px #040303;
+    filter: brightness(0.95);
+}
+
+
+.response-time {
+    font-style: oblique;
+    color: #000000;
+    font-size: 15px;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: right;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #6c6c6c;
+    margin-top: 87px;
+    padding-top: 20px;
+    border-top: 1px dashed #6c6c6c;
+    text-align: right;
+}
+
+.contact::after {
+    content: '🪩';
+    position: absolute;
+    top: -30px;
+    left: 152px;
+    font-size: 4rem;
+    z-index: 10;
+    animation: spin 3s linear infinite;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact::before {
+    content: '👌🏻';
+    position: absolute;
+    top: 190px;
+    left: 298px;
+    font-size: 4rem;
+    z-index: 10;
+    animation: wave 2s ease-in-out infinite;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+.response-time::after {
+    content: '🎀';
+    font-style: normal;
+    position: absolute;
+    top: -30px;
+    right: 98px;
+    font-size: 3rem;
+    z-index: 10;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+    transform: rotate(10deg);
+}
+
+/* Tablet 768px */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 25px 20px;
+        margin: 10px 5px;
+        gap: 15px;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    .footer-decor p {
+        font-size: 14px;
+        padding-right: 0;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-links a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .response-time {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact::after {
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+    }
+
+    .contact::before {
+        display: none;
+    }
+
+    .response-time::after {
+        display: none;
+    }
+}
+
+/* Mobile 480px  */
+@media (max-width: 480px) {
+    .contact {
+        padding: 20px 15px;
+        margin: 5px;
+        border-radius: 15px;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .footer-decor p {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+
+    .contact-links a {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .response-time {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .copyright {
+        font-size: 11px;
+        margin-top: 30px;
+        padding-top: 15px;
+    }
+    
+    .contact::after {
+        top: -25px;
+        left: 29%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+    }
+
+    .contact::before {
+        font-size: 2.5rem;
+        bottom: -20px;
+        left: 10px;
+    }
+
+    .response-time::after {
+        top: 80px;
+    }
+
+    
+}

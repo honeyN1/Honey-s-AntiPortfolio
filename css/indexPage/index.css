@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-attachment: fixed;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    position: relative;
+
+}
+.navbar{
+    position: fixed;
+    align-items: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50px;
+    box-shadow: 4px 4px 29px rgba(131, 130, 130, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.1px solid rgba(10, 10, 10, 0.826);
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+       
+}
+.navbar a{
+    color: #000000;
+    font-size: 12px;
+    margin: auto;
+    padding: 20px ;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    color: #DF97A7;
+}
+
+.hero{
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #DF97A7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+    
+}
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-text{
+    max-width: 600px;
+}
+.hero-text p{
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 2px;
+    padding: 0 0 3px 0;
+}
+.hero-text h1{
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 8px;
+} 
+
+.hi-icon {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+
+.hero-image{
+   width: 400px;
+   transition: transform 0.3s ease;
+}
+
+.hero-image:hover{
+    animation: wobble 0.5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    75%{transform: rotate(3deg);}
+    100%{transform: rotate(0deg);}
+}
+
+    
+.main-name {
+    color: #DF97A7;
+}
+
+
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid #333;
+    white-space: nowrap;
+    letter-spacing: 0px;
+    max-width: max-content;
+    animation:
+        typing 3.5s steps(26, end) forwards,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #333;
+    }
+}
+
+.skills-animation {
+   background: #9DAC72;
+   padding: 15px 0;
+   overflow: hidden;
+   transform: rotate(-2deg);
+    width: 105%;
+    margin-left: -5%;
+    margin-top: -5px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+.skills-title{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.skills-list{
+    display: flex;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
+}
+.skill-item {
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+    margin: 0 40px;
+    display: inline-block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* Tablet 760 px */
+
+@media (max-width:760px) {
+    .navbar {
+        width: 80%;
+        padding: 10px 0;
+        position: fixed;
+    }
+
+    .navbar a {
+        font-size: 11px;
+        padding: 10px 15px;
+    }
+
+    .hero {
+        padding: 0 30px;
+    }
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px
+    }
+
+    .hero-image {
+        width: 300px;
+    }
+
+}
+/* Mobile 480px */
+
+@media(max-width:480px) {
+    .navbar{
+        width: 70%;
+        top: 2%;
+        padding: 7px 0;
+        position: fixed;
+    }
+    .navbar a{
+        font-size: 9px;
+        padding: 8px 10px;
+        
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 40px;
+        height: auto;
+    }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        }
+
+        .hero-text {
+            max-width: 100%;
+        }
+    
+        .hero-text h1 {
+            font-size: 25px;
+        }
+    
+        .hero-text p {
+            font-size: 12px;
+        }
+    
+        .hero-image {
+            width: 250px;
+        }
+    
+        .hi-icon {
+            font-size: 30px;
+        }
+    
+        .skill-item {
+            font-size: 12px;
+            margin: 0 20px;
+        }
+}

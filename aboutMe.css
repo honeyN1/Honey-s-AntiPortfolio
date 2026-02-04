@@ -1,0 +1,455 @@
+
+#about {
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+#about h2 {
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.2;
+}
+.aboutToMess {
+    color: #e5a3c9;
+    font-size: 200px;
+    font-weight: 900;
+    display: block;
+    cursor: pointer;
+}
+.aboutToMess:hover {
+    text-shadow: 10px 10px 0 rgba(174, 42, 42, 50);
+    transition: transform 0.6s ease-in-out;
+
+}
+#about::after {
+    content: '';
+    position: absolute;
+    top: 750px;
+    left: 900px;
+    width: 500px;
+    height: 300px;
+    display: block;
+    background-image: url('img/ChatGPT\ Image\ Jan\ 22\,\ 2026\,\ 04_02_52\ PM.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    transform: rotate(10deg);
+    
+}
+#about::before {
+    content: '';
+    position: absolute;
+    top: 145%;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    display: block;
+    background-image: url('img/Gemini_Generated_Image_j0vp8kj0vp8kj0vp-Photoroom.png');
+        background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    transform: rotate(-30deg);
+
+}
+
+@keyframes wobble-3d {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+}
+
+.about-image {
+    
+    top: 30px;
+    right: 0;
+    width: 120px;
+    transform: rotate(15deg);
+   
+}
+.highlight-word {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.highlight-word::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 70%;
+    bottom: 5px;
+    left: 0;
+    background: #FCE384;
+    z-index: -1;
+    transform: skewX(10deg);
+    transition: width 0.4s ease;
+   
+}
+.highlight-word:hover::before {
+    width: 100%;
+}
+.highlight-word:hover {
+    color: #5fa0de;
+}
+
+#about p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.about-grid {
+    display: flex; 
+    gap: 25px;
+    overflow-x: auto;  
+    overflow-y: hidden;  
+    margin-top: 60px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;  
+}
+
+.about-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.about-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.about-grid::-webkit-scrollbar-thumb {
+    background: #DF97A7;
+    border-radius: 10px;
+}
+
+.about-grid::-webkit-scrollbar-thumb:hover {
+    background: #c77d8d;
+}
+
+/* Individual card styling */
+.flaw-card {
+    min-width: 320px;  
+    max-width: 320px;  
+    border-radius: 15px;
+    border: 1px solid #b4b4b4;
+    background: #ffd6e8;
+    transition: all 0.3s ease;
+    flex-shrink: 0;  
+    scroll-snap-align: start;  
+    overflow: hidden; 
+ }
+
+/* Hover effect */
+.flaw-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 4px 6px rgb(157, 172, 114);
+    border: 1px solid #1d1d1d;
+}
+
+/* Image container */
+.card-image {
+    width: 100%;
+    height: 180px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+Different gradient for each card
+.flaw-card:nth-child(1)  { background: linear-gradient(135deg, #ffd6e8 0%, #ffeef5 100%); }
+.flaw-card:nth-child(2)  { background: linear-gradient(135deg, #d6e8ff 0%, #eef5ff 100%); }
+.flaw-card:nth-child(3)  { background: linear-gradient(135deg, #ffe8d6 0%, #fff5ee 100%); }
+.flaw-card:nth-child(4)  { background: linear-gradient(135deg, #e8d6ff 0%, #f5eeff 100%); }
+.flaw-card:nth-child(5)  { background: linear-gradient(135deg, #d6ffe8 0%, #eefff5 100%); }
+.flaw-card:nth-child(6)  { background: linear-gradient(135deg, #ffd6d6 0%, #ffeeee 100%); }
+
+/* Image styling */
+.card-image img {
+    width: 320px;
+    height:180px;
+    object-fit: cover;  
+    
+}
+
+/* Text content area */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    color: #010917;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #718096;
+    margin: 0;
+}
+
+@media (max-width: 1199px) {
+    #about::after {
+        width: 400px;
+        height: 240px;
+        right: 3%;
+    }
+
+    #about::before {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 991px) {
+    #about {
+        padding: 50px 20px;
+    }
+
+    #about h2 {
+        font-size: 40px;
+    }
+
+    .aboutToMess {
+        font-size: 150px;
+    }
+
+    .aboutToMess:hover {
+        text-shadow: 6px 6px 0 rgba(174, 42, 42, 0.5);
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    #about::after {
+        width: 300px;
+        height: 180px;
+        top: 35%;
+        right: 2%;
+    }
+
+    #about::before {
+        width: 100px;
+        height: 100px;
+        bottom: 8%;
+        left: 3%;
+    }
+
+    .about-grid {
+        margin-top: 50px;
+        padding: 30px 15px;
+    }
+}
+
+/* Tablet Portrait  */
+@media (max-width: 768px) {
+    #about {
+        padding: 40px 15px;
+    }
+
+    #about h2 {
+        font-size: 32px;
+    }
+
+    .aboutToMess {
+        font-size: 111px;
+    }
+
+    .aboutToMess:hover {
+        text-shadow: 4px 4px 0 rgba(174, 42, 42, 0.5);
+    }
+
+    #about p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    #about::after {
+        width: 200px;
+        height: 120px;
+        top: 25%;
+        right: -5%;
+        opacity: 0.8;
+    }
+
+    #about::before {
+        width: 80px;
+        height: 80px;
+        bottom: 5%;
+        left: -2%;
+        opacity: 0.8;
+    }
+
+    .about-grid {
+        padding: 20px 15px;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .flaw-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-image img {
+        width: 280px;
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile Large (481px - 767px) */
+@media (max-width: 480px) {
+    #about {
+        padding: 30px 10px;
+    }
+
+    #about h2 {
+        font-size: 26px;
+    }
+
+    .aboutToMess {
+        font-size: 80px;
+    }
+
+    #about p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #about::after,
+    #about::before {
+        display: none;
+    }
+
+    .about-grid {
+        padding: 15px 10px;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .flaw-card {
+        min-width: 260px;
+        max-width: 260px;
+    }
+
+    .card-image {
+        height: 140px;
+    }
+
+    .card-image img {
+        width: 260px;
+        height: 140px;
+    }
+
+    .card-content {
+        padding: 12px;
+    }
+
+    .card-content h3 {
+        font-size: 15px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+}
+
+/* Mobile Small 360px  */
+@media (max-width: 360px) {
+    #about {
+        padding: 25px 8px;
+    }
+
+    #about h2 {
+        font-size: 22px;
+    }
+
+    .aboutToMess {
+        font-size: 60px;
+    }
+
+    #about p {
+        font-size: 13px;
+    }
+
+    .about-grid {
+        padding: 10px 8px;
+        gap: 10px;
+    }
+
+    .flaw-card {
+        min-width: 240px;
+        max-width: 240px;
+    }
+
+    .card-image {
+        height: 130px;
+    }
+
+    .card-image img {
+        width: 240px;
+        height: 130px;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 14px;
+    }
+
+    .card-content p {
+        font-size: 11px;
+    }
+
+    .about-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+}
